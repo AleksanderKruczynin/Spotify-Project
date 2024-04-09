@@ -1,0 +1,542 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <script src="js.js" defer></script>
+  <link rel="icon" href="spotify.png">
+
+  <title>Spotify-like Project</title>
+</head>
+
+<body style="overflow: hidden;">
+  <div class="main">
+    <div class="inMain">
+      <div class="sidebar" id="sidebar">
+        <div class="topSidebar">
+          <button class="homeButton" style="padding: 4px 12px;">
+            <div style="
+                height: 40px;
+                display: flex;
+                align-items: center;
+                gap: 20px;
+              ">
+              <div style="
+                  height: 24px;
+                  width: 24px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                ">
+                <i class="fas fa-home sidebar-icon fa-xl"></i>
+              </div>
+              <span class="sidebar-text" style="font-size: 16px;">Home</span>
+            </div>
+          </button>
+          <button class="searchButton" style="padding: 4px 12px;">
+            <div style="
+                height: 40px;
+                display: flex;
+                align-items: center;
+                gap: 20px;
+              ">
+              <div style="
+                  height: 24px;
+                  width: 24px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                ">
+                <i class="fas fa-search sidebar-icon fa-xl"></i>
+              </div>
+              <span class="sidebar-text" style="font-size: 16px;">Search</span>
+            </div>
+          </button>
+        </div>
+        <div class="bottomSidebar">
+          <div class="sidebar1">
+            <div style="height: 100%; width: auto; flex: 1;">
+              <button class="yourLibraryButton text" style="
+                  height: 100%;
+                  width: auto;
+                  padding: 4px 8px;
+                  font-size: 1rem;
+                ">
+                <div style="
+                    height: 24px;
+                    width: 24px;
+                    margin-right: 12px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                  ">
+                  <i class="fa-solid fa-list fa-xl"></i>
+                </div>
+                Your Library
+              </button>
+            </div>
+            <button class="createPlaylistButton" style="
+                height: 100%;
+                width: 32px;
+                height: 32px;
+                border-radius: 50px;
+                justify-content: center;
+              ">
+              <i class="fa-solid fa-plus text fa-lg"></i>
+            </button>
+            <button class="extendSidebarButton" style="
+                height: 100%;
+                width: 32px;
+                height: 32px;
+                border-radius: 50px;
+                justify-content: center;
+              ">
+              <i class="fa-solid fa-arrow-right fa-lg text"></i>
+            </button>
+          </div>
+          <div class="sidebar2">
+            <div style="display: flex; height: 32px; display: flex;">
+              <div style="width: 75px; border-radius: 50px; margin-right: 8px;">
+                <button class="categoriesInSidebar">Playlist</button>
+              </div>
+
+              <div style="width: 65px; border-radius: 50px; margin-right: 8px;">
+                <button class="categoriesInSidebar">Artist</button>
+              </div>
+              <div style="width: 72px; border-radius: 50px; margin-right: 8px;">
+                <button class="categoriesInSidebar">Albums</button>
+              </div>
+              <div style="width: 140px;">
+                <button class="categoriesInSidebar">Podcast & Shows</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="divThatAddsPadding">
+            <div class="sidebar3">
+              <div class="playlistSearchBar">
+                <button class="playlistSearchButton">
+                  <i class="fas fa-search sidebar-icon fa-sm"></i>
+                </button>
+                <button class="recentButton">
+                  <div>Recent</div>
+                  <i class="fa-solid fa-list" style="margin-left: 5px;"></i>
+                </button>
+              </div>
+              <div class="playlistTable">
+                <div class="playlistItem">
+                  <button class="playlistButton">
+                    <img src="https://misc.scdn.co/liked-songs/liked-songs-64.png" class="playlistImage" />
+                    <div class="playlistInformation">
+                      <a class="playlistName">Liked songs</a>
+                      <div style="display: flex; flex-direction: row;">
+                        <a class="playlistCreator">Playlist · 141songs</a>
+                      </div>
+                    </div>
+                  </button>
+                </div>
+                <div class="playlistItem">
+                  <button class="playlistButton">
+                    <img
+                      src="https://mosaic.scdn.co/60/ab67616d00001e022aa16b5bd00c7284fb65335fab67616d00001e025485ea186d6971e18fabcc2fab67616d00001e02ce146ea2439a3a4d15375e2dab67616d00001e02fbad22668457d18df5ad0a44"
+                      class="playlistImage">
+                    </img>
+                    <div class="playlistInformation">
+                      <a class="playlistName">My recomendation playlist</a>
+                      <div style="display: flex; flex-direction: row;">
+                        <a class="playlistCreator">Playlist · username</a>
+                      </div>
+                    </div>
+                  </button>
+                </div>
+                <div class="playlistItem">
+                  <button class="playlistButton">
+                    <img
+                      src="https://mosaic.scdn.co/60/ab67616d00001e022aa16b5bd00c7284fb65335fab67616d00001e025485ea186d6971e18fabcc2fab67616d00001e02ce146ea2439a3a4d15375e2dab67616d00001e02fbad22668457d18df5ad0a44"
+                      class="playlistImage" />
+                    <div class="playlistInformation">
+                      <a class="playlistName">My recomendation playlist</a>
+                      <div style="display: flex; flex-direction: row;">
+                        <a class="playlistCreator">Playlist · username</a>
+                      </div>
+                    </div>
+                  </button>
+                </div>
+                <div class="playlistItem">
+                  <button class="playlistButton">
+                    <img
+                      src="https://mosaic.scdn.co/60/ab67616d00001e022458c546beecf250879473c1ab67616d00001e025485ea186d6971e18fabcc2fab67616d00001e027be5cb37c12a19f60142351eab67616d00001e02fbad22668457d18df5ad0a44"
+                      class="playlistImage" />
+                    <div class="playlistInformation">
+                      <a class="playlistName">My recomendation playlist</a>
+                      <div style="display: flex; flex-direction: row;">
+                        <a class="playlistCreator">Playlist · username 123 </a>
+                      </div>
+                    </div>
+                  </button>
+                </div>
+                <div class="playlistItem">
+                  <button class="playlistButton">
+                    <img
+                      src="https://seeded-session-images.scdn.co/v2/img/122/secondary/track/6Ylxgg0ky2KYrVNZbDRfba/en"
+                      class="playlistImage" />
+                    <div class="playlistInformation">
+                      <a class="playlistName">Under Bright Light Radio</a>
+                      <div style="display: flex; flex-direction: row;">
+                        <a class="playlistCreator">Playlist · Spotify</a>
+                      </div>
+                    </div>
+                  </button>
+                </div>
+                <div class="playlistItem">
+                  <button class="playlistButton">
+                    <img
+                      src="https://seeded-session-images.scdn.co/v2/img/122/secondary/track/0pNZIe2rZEQ92bhKFa5vhP/en"
+                      class="playlistImage" />
+                    <div class="playlistInformation">
+                      <a class="playlistName">Pokazhi mne radio</a>
+                      <div style="display: flex; flex-direction: row;">
+                        <a class="playlistCreator">Playlist · Spotify</a>
+                      </div>
+                    </div>
+                  </button>
+                </div>
+                <div class="playlistItem">
+                  <button class="playlistButton">
+                    <img
+                      src="https://seeded-session-images.scdn.co/v2/img/122/secondary/track/2UwbhMie1EAYuTZ0QXeMwl/en"
+                      class="playlistImage" />
+                    <div class="playlistInformation">
+                      <a class="playlistName">Save me Radio</a>
+                      <div style="display: flex; flex-direction: row;">
+                        <a class="playlistCreator">Playlist · Spotify</a>
+                      </div>
+                    </div>
+                  </button>
+                </div>
+                <div class="playlistItem">
+                  <button class="playlistButton">
+                    <img
+                      src="https://dailymix-images.scdn.co/v2/img/ab6761610000e5ebf0c20db5ef6c6fbe5135d2e4/4/en/default"
+                      class="playlistImage" />
+                    <div class="playlistInformation">
+                      <a class="playlistName">Daily mix 4</a>
+                      <div style="display: flex; flex-direction: row;">
+                        <a class="playlistCreator">Playlist · Spotify</a>
+                      </div>
+                    </div>
+                  </button>
+                </div>
+                <div class="playlistItem">
+                  <button class="playlistButton">
+                    <img src="https://i.scdn.co/image/ab6761610000101fd3608353f3a71ab124f2c56c"
+                      style="border-radius: 50px;" class="playlistImage" />
+                    <div class="playlistInformation">
+                      <a class="playlistName">VIOLENT VIRA</a>
+                      <div style="display: flex; flex-direction: row;">
+                        <a class="playlistCreator">Artist</a>
+                      </div>
+                    </div>
+                  </button>
+                </div>
+                <div class="playlistItem">
+                  <button class="playlistButton">
+                    <img src="https://i.scdn.co/image/ab6761610000101fd3608353f3a71ab124f2c56c"
+                      style="border-radius: 50px;" class="playlistImage" />
+                    <div class="playlistInformation">
+                      <a class="playlistName">VIOLENT VIRA</a>
+                      <div style="display: flex; flex-direction: row;">
+                        <a class="playlistCreator">Artist</a>
+                      </div>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content">
+        <div class="upperContent" style="
+            height: 340px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+          ">
+          <div style="
+              padding: 16px 24px;
+              display: flex;
+              justify-content: space-between;
+            ">
+            <div style="
+                display: flex;
+                justify-content: space-between;
+                width: 72px;
+              ">
+              <button class="goPageBackButton" style="
+                  height: 32px;
+                  width: 32px;
+                  background-color: #0000008a;
+                  border-radius: 50px;
+                  border: 0px;
+                ">
+                <i class="fa-solid fa-chevron-left fa-xl"></i>
+              </button>
+              <button class="goPageFrontButton" style="
+                  height: 32px;
+                  width: 32px;
+                  background-color: #0000008a;
+                  border-radius: 50px;
+                  border: 0px;
+                ">
+                <i class="fa-solid fa-chevron-right fa-xl"></i>
+              </button>
+            </div>
+            <div style="
+                display: flex;
+                justify-content: space-between;
+                width: 206px;
+              ">
+              <button class="installAppButton">
+                <i class="fa-regular fa-circle-down" style="margin-right: 5px;"></i>
+                Install app
+              </button>
+              <button class="bellButton">
+                <i class="fa-regular fa-bell fa-lg" style="color: #ffffffa1;"></i>
+              </button>
+              <button class="accountButton">
+                A
+                <summary>
+                  <div class="accountMenu">
+                    <p>1</p>
+                    <p>2</p>
+                    <p>3</p>
+                    <p>4</p>
+                  </div>
+                </summary>
+              </button>
+            </div>
+          </div>
+          <div class="row" style="
+              margin-bottom: 0px;
+              display: flex;
+              align-items: flex-end;
+              padding: 0 24px 24px 24px;
+            ">
+            <div class="heart">
+              <i class="fas fa-heart fa-4x"></i>
+            </div>
+            <div class="textContainer">
+              <h4 style="margin: 0px;">Playlist</h4>
+              <h1 style="font-size: 90px; margin: 0px; padding: 0px;">
+                Liked Songs
+              </h1>
+              <h4 style="margin: 0px;">username · 111 Songs</h4>
+            </div>
+          </div>
+        </div>
+        <div class="middleContent" style="max-height: 104px;">
+          <div style="
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+            ">
+            <button class="playButton">
+              <i class="fas fa-play play-icon fa-lg"></i>
+            </button>
+            <div style="display: flex; width: 100%; justify-content: right;">
+              <button class="listButton">
+                List
+                <i class="fa-solid fa-list"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="lowerContent" id="tracksTable">
+          <div class="tableTitleRow" style="border-bottom: solid 1px hsla(0, 0%, 100%, 0.1);">
+            <div class="tableItem gross" style="justify-content: end; color: #ffffffa1;">
+              #
+            </div>
+            <div class="tableItem">Title</div>
+            <div class="tableItem">Album</div>
+            <div class="tableItem">Date added</div>
+            <div class="tableItem" style="display: flex; justify-content: center;">
+              <i class="fa-regular fa-clock" style="justify-content: center; justify-items: center;"></i>
+            </div>
+          </div>
+          <div class="tableRow" onclick="updateFooter(this); playAudio('song1')">
+            <audio id="song1" class="song" src="songs/DUVET.mp3"></audio>
+            <div class="tableItem numberIntoIcon number1" style="justify-content: end;"></div>
+            <div class="tableItem">
+              <img id="songImage" src="https://i.scdn.co/image/ab67616d000048519e030b804258dc2017ad859f"/>
+              <div style="display: flex; flex-direction: column;">
+                <a id="songName" class="gross tableText">Duvet</a>
+                <a id="songAuthor" class="tableText">bôa</a>
+              </div>
+            </div>
+            <div class="tableItem tableText">
+              Twilight
+            </div>
+            <div class="tableItem dateAdded">1 day ago</div>
+            <div class="tableItem lengh">
+              <i class="fas fa-heart heartIcon" id="rowHeartIcon"></i> 3:23
+            </div>
+          </div>
+          <div class="tableRow" onclick="updateFooter(this); playAudio('song2')">
+            <audio id="song2" class="song" src="songs/Favorite.mp3"></audio>
+            <div class="tableItem numberIntoIcon number2" style="justify-content: end;"></div>
+            <div class="tableItem">
+              <img id="songImage" src="https://i.scdn.co/image/ab67616d00004851a22b4b47be37bd37cef0900a"  />
+              <div style="display: flex; flex-direction: column;">
+                <a id="songName" class="gross tableText">favorite</a>
+                <a id="songAuthor" class="tableText">Isabel LaRosa</a>
+              </div>
+            </div>
+            <div class="tableItem tableText">
+              favorite
+            </div>
+            <div class="tableItem dateAdded">2 days ago</div>
+            <div class="tableItem lengh">
+              <i class="fas fa-heart heartIcon" id="rowHeartIcon"></i> 2:13
+            </div>
+          </div>
+          <div class="tableRow" onclick="updateFooter(this); playAudio('song3')">
+            <audio id="song3" class="song" src="songs/Let_Me_Know.mp3"></audio>
+            <div class="tableItem numberIntoIcon number3" style="justify-content: end;"></div>
+            <div class="tableItem">
+              <img id="songImage" src="https://i.scdn.co/image/ab67616d00004851401ea2c7ac7ef87bd32c990f"  />
+              <div style="display: flex; flex-direction: column;">
+                <a id="songName" class="gross tableText">Let Me Know</a>
+                <a id="songAuthor" class="tableText">Juice WRLD</a>
+              </div>
+            </div>
+            <div class="tableItem tableText">
+              Let Me Know
+            </div>
+            <div class="tableItem dateAdded">1 week ago</div>
+            <div class="tableItem lengh">
+              <i class="fas fa-heart heartIcon" id="rowHeartIcon"></i> 3:35
+            </div>
+          </div>
+          <div class="tableRow" onclick="updateFooter(this); playAudio('song4')">
+            <audio id="song4" class="song" src="songs/Strangers.mp3"></audio>
+            <div class="tableItem numberIntoIcon number4" style="justify-content: end;"></div>
+            <div class="tableItem">
+              <img id="songImage" src="https://i.scdn.co/image/ab67616d000048514756c2e9ae436437cd75e9f3"  />
+              <div style="display: flex; flex-direction: column;">
+                <a id="songName" class="gross tableText">Strangers</a>
+                <a id="songAuthor" class="tableText">Kenya Grace</a>
+              </div>
+            </div>
+            <div class="tableItem tableText">
+              Strangers
+            </div>
+            <div class="tableItem dateAdded">2 weeks ago</div>
+            <div class="tableItem lengh">
+              <i class="fas fa-heart heartIcon" id="rowHeartIcon"></i> 2:53
+            </div>
+          </div>
+          <div class="tableRow" onclick="updateFooter(this); playAudio('song5')">
+            <audio id="song5" class="song" src="songs/my-head-is-empty.mp3"></audio>
+            <div class="tableItem numberIntoIcon number5" style="justify-content: end;"></div>
+            <div class="tableItem">
+              <img id="songImage" src="https://i.scdn.co/image/ab67616d00004851165987d9662a59c79ea8b0a6"  />
+              <div style="display: flex; flex-direction: column;">
+                <a id="songName" class="gross tableText">I was only temporary</a>
+                <a id="songAuthor" class="tableText">my head is empty,
+                  .diedlonely</a>
+              </div>
+            </div>
+            <div class="tableItem tableText">
+              I was only temporary (Remixes)
+            </div>
+            <div class="tableItem dateAdded">2 weeks ago</div>
+            <div class="tableItem lengh">
+              <i class="fas fa-heart heartIcon" id="rowHeartIcon"></i> 1:42
+            </div>
+          </div>
+          <div class="tableRow" onclick="updateFooter(this); playAudio('song6')">
+            <audio id="song6" class="song" src="songs/Butterflies.mp3"></audio>
+            <div class="tableItem numberIntoIcon number6" style="justify-content: end;"></div>
+            <div class="tableItem">
+              <img id="songImage" src="https://i.scdn.co/image/ab67616d0000485148b82da8d0b5822b0aca5958"  />
+              <div style="display: flex; flex-direction: column;">
+                <a id="songName" class="gross tableText">butterflies</a>
+                <a id="songAuthor" class="tableText">Isabel LaRosa</a>
+              </div>
+            </div>
+            <div class="tableItem tableText">
+              YOU FEAR THE GOT THAT LOVES YOU
+            </div>
+            <div class="tableItem dateAdded">Nov 30, 2023</div>
+            <div class="tableItem lengh">
+              <i class="fas fa-heart heartIcon" id="rowHeartIcon"></i> 2:24
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="footer">
+        <div class="footerSong">
+          <img class="footerSongImage" id="footerSongImage"/>
+          <div style="display: flex; flex-direction: column; align-items: start;">
+            <a id="footerSongName" class="footerSongName" style="font-size: 14px; padding: 0 12px 0 6px;"></a>
+            <a id="footerSongAuthor" class="footerSongAuthor" style="font-size: 12px; padding: 0 12px 0 6px; color: #a7a7a7;">
+            </a>
+          </div>
+          <i class id="footerHeartIcon"></i>
+        </div>
+        <div class="footerPlayer">
+          <div class="playerButtons">
+            <button class="playerButton leftButton">
+              <i class="fas fa-step-backward"></i>
+            </button>
+            <button id="playPauseBtn" class="controlBtn" onclick="togglePlayPause()">
+              <i id="playPauseIcon" class="fas fa-play"></i>
+            </button>
+            <button class="playerButton rightButton">
+              <i class="fas fa-step-forward"></i>
+            </button>
+          </div>
+          <div class="playerSongLength">
+            <div class="songProgress">
+              <span id="leftTime" class="songTime" style="justify-content: right;"></span>
+              <div class="progressBar2" id="progressBar2">
+                <div class="progressBar" id="progressBar">
+                  <div class="progressedBar" id="progressedBar">
+                  </div>
+                </div>
+              </div>
+              <span id="rightTime" class="songTime" style="justify-content: left;"></span>
+            </div>
+          </div>
+        </div>
+        <div class="footerSettings">
+          <div id="playerControls" style="display: flex; justify-content: center;">
+            <div class="volumeIcon">
+              <i class="fa-solid fa-volume-high"></i>
+            </div>
+            <div class="volumeBar" id="volumeBar">
+              <div class="volumeRange" id="volumeRange">
+                <div class="volumedRange" id="volumedRange">
+
+                </div>
+              </div>
+            </div>
+            <div class="fullScreen">
+              <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+            </div>
+            <div class="openMiniPlayer fullScreen">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
