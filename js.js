@@ -3,14 +3,6 @@ var songs = document.querySelectorAll('audio');
 var progressedBar = document.getElementById('progressedBar');
 var progressBarNew = document.getElementById('progressBar2');
 
-// songs.forEach(function(song) {
-//     song.ontimeupdate = function(e) {
-//         if (song.duration > 0) {
-//             progressedBar.style.width = Math.floor(song.currentTime * 100 / song.duration) + "%";
-//             console.log('playing', song.currentTime / song.duration * 100);
-//         }
-//     }
-// });
 
 progressBarNew.onclick = function(e) {
     var offsetX = e.offsetX || e.layerX;
