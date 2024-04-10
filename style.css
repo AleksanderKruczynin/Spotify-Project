@@ -18,7 +18,6 @@ body {
   width: 100%;
   display: grid;
   grid-template-columns: auto 1fr;
-  grid-template-rows: 867px 72px;
   grid-template-areas:
     "eins zwei"
     "drei drei";
