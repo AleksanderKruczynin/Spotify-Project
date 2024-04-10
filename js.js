@@ -56,6 +56,7 @@ function playAudio(songId) {
   if (currentAudio && !currentAudio.paused) {
     currentAudio.pause();
     document.getElementById("playPauseIcon").className = "fas fa-play";
+    document.getElementById("playPauseIcon2").className = "fas fa-play fa-xl";
   }
   
   var audio = document.getElementById(songId);
@@ -63,6 +64,7 @@ function playAudio(songId) {
   audio.play();
   currentAudio = audio;
   document.getElementById("playPauseIcon").className = "fas fa-pause";
+  document.getElementById("playPauseIcon2").className = "fas fa-pause fa-xl";
 
   rightTime.innerText = formatTime(currentAudio.duration);
 
@@ -96,9 +98,11 @@ function togglePlayPause() {
     if (currentAudio.paused) {
       currentAudio.play();
       document.getElementById("playPauseIcon").className = "fas fa-pause";
+      document.getElementById("playPauseIcon2").className = "fas fa-pause fa-xl";
     } else {
       currentAudio.pause();
       document.getElementById("playPauseIcon").className = "fas fa-play";
+      document.getElementById("playPauseIcon2").className = "fas fa-play fa-xl";
     }
   }
 }

@@ -325,6 +325,11 @@ body {
   color: black;
   cursor: pointer;
   border: solid 4px #241a46;
+  display: flex;
+  align-content: center;
+  text-align: center;
+  align-items: center;
+  flex-direction: column  ;
 }
 .accountButton:hover {
   transform: scale(1.05);
@@ -334,11 +339,25 @@ body {
   display: block;
 }
 .accountMenu {
-  width: 168px;
-  height: 198px;
-  background-color: black;
+  margin-top: 17px;
+  padding: 4px;
+  width: calc(196px - 8px);
+  height: calc(168px - 8px);
+  background-color: #282828;
+  color: hsla(0,0%,100%,.9);
+  margin-left: -160px;
+  border-radius: 5px;
   display: none;
+  box-shadow: 0 16px 24px rgba(0,0,0,.3),0 6px 8px rgba(0,0,0,.2) 
 }
+.menuItem{
+  display: flex;
+  justify-content: left;
+  margin: 0px;
+  padding: 12px 8px 12px 12px;
+  height: calc(40px - 24px);
+}
+
 .row {
   color: white;
   margin-bottom: 0px;
@@ -367,7 +386,7 @@ body {
   justify-content: center;
   background-color: #f0f0f0;
   border-radius: 4px;
-  box-shadow: 8px 8px 8px 8px rgba(0.1, 0.1, 0.1, 0.1);
+  box-shadow: 0 4px 60px rgba(0,0,0,.5);
 }
 .tableItem > .heartIcon {
   margin-right: 12px;
@@ -392,7 +411,12 @@ body {
   justify-content: center;
   align-items: center;
   margin-right: 10px;
+  cursor: pointer;
 }
+.playButton:hover{
+  transform: scale(1.05);
+}
+
 .play-icon {
   color: #000000;
 }
