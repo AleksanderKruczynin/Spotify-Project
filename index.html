@@ -378,7 +378,7 @@
                 <i class="fa-regular fa-clock" style="justify-content: center; justify-items: center;"></i>
               </div>
             </div>
-            <div class="tableRow" onclick="updateFooter(this); playAudio('song1')">
+            <div class="tableRow" id="row1" onclick="updateFooter(this); playAudio('song1')">
               <audio id="song1" class="song" src="songs/DUVET.mp3"></audio>
               <div class="tableItem numberIntoIcon number1" style="justify-content: end;"></div>
               <div class="tableItem">
@@ -396,7 +396,7 @@
                 <i class="fas fa-heart heartIcon" id="rowHeartIcon"></i> 3:23
               </div>
             </div>
-            <div class="tableRow" onclick="updateFooter(this); playAudio('song2')">
+            <div class="tableRow" id="row2" onclick="updateFooter(this); playAudio('song2')">
               <audio id="song2" class="song" src="songs/Favorite.mp3"></audio>
               <div class="tableItem numberIntoIcon number2" style="justify-content: end;"></div>
               <div class="tableItem">
@@ -414,7 +414,7 @@
                 <i class="fas fa-heart heartIcon" id="rowHeartIcon"></i> 2:13
               </div>
             </div>
-            <div class="tableRow" onclick="updateFooter(this); playAudio('song3')">
+            <div class="tableRow" id="row3" onclick="updateFooter(this); playAudio('song3')">
               <audio id="song3" class="song" src="songs/Let_Me_Know.mp3"></audio>
               <div class="tableItem numberIntoIcon number3" style="justify-content: end;"></div>
               <div class="tableItem">
@@ -432,7 +432,7 @@
                 <i class="fas fa-heart heartIcon" id="rowHeartIcon"></i> 3:35
               </div>
             </div>
-            <div class="tableRow" onclick="updateFooter(this); playAudio('song4')">
+            <div class="tableRow" id="row4" onclick="updateFooter(this); playAudio('song4')">
               <audio id="song4" class="song" src="songs/Strangers.mp3"></audio>
               <div class="tableItem numberIntoIcon number4" style="justify-content: end;"></div>
               <div class="tableItem">
@@ -450,7 +450,7 @@
                 <i class="fas fa-heart heartIcon" id="rowHeartIcon"></i> 2:53
               </div>
             </div>
-            <div class="tableRow" onclick="updateFooter(this); playAudio('song5')">
+            <div class="tableRow" id="row5" onclick="updateFooter(this); playAudio('song5')">
               <audio id="song5" class="song" src="songs/my-head-is-empty.mp3"></audio>
               <div class="tableItem numberIntoIcon number5" style="justify-content: end;"></div>
               <div class="tableItem">
@@ -469,7 +469,7 @@
                 <i class="fas fa-heart heartIcon" id="rowHeartIcon"></i> 1:42
               </div>
             </div>
-            <div class="tableRow" onclick="updateFooter(this); playAudio('song6')">
+            <div class="tableRow" id="row6" onclick="updateFooter(this); playAudio('song6')">
               <audio id="song6" class="song" src="songs/Butterflies.mp3"></audio>
               <div class="tableItem numberIntoIcon number6" style="justify-content: end;"></div>
               <div class="tableItem">
@@ -502,13 +502,13 @@
           </div>
           <div class="footerPlayer">
             <div class="playerButtons">
-              <button class="playerButton leftButton">
+              <button class="playerButton leftButton" onclick="backSong()">
                 <i class="fas fa-step-backward"></i>
               </button>
               <button id="playPauseBtn" class="controlBtn" onclick="togglePlayPause()">
                 <i id="playPauseIcon" class="fas fa-play"></i>
               </button>
-              <button class="playerButton rightButton">
+              <button class="playerButton rightButton" onclick="skipSong()">
                 <i class="fas fa-step-forward"></i>
               </button>
             </div>
