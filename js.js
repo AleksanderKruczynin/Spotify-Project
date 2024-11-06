@@ -13,7 +13,7 @@ const volumeIcon = document.querySelector(".volumeIcon");
 volumeBar = document.getElementById("volumeBar");
 volumeRangeInput = document.getElementById("volumeRange");
 let previousVolume = 0.25;
-
+console.log("123test");
 // this function will start the song you will choose, +loads the footer funstionallity
 function playAudio(songId) {
   console.log("audio clicked");
